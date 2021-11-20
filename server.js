@@ -1,5 +1,5 @@
 "use strict";
-const homeController = require("./homeController");
+const homeController = require("./controllers/homeController");
 // Imports dependencies and set up http server
 const express = require("express"),
   bodyParser = require("body-parser"),
