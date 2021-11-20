@@ -47,7 +47,7 @@ let getStartedButton = () => {
               },
               {
                 "type":"web_url",
-                "url":"https://app-demo-webview.herokuapp.com/",
+                "url":"https://petersfancybrownhats.com",
                 "title":"View Website",
                 "messenger_extensions": "true",
                 "webview_height_ratio": "full",
