@@ -1,8 +1,10 @@
+require("dotenv").config();
+const handle=require('./handle');
 let getHomePage = (req, res) => {
   return res.send("Hello world");
 };
 let getWebhook = (req, res) => {
-  let VERIFY_TOKEN = "isJustRandomString";
+  let VERIFY_TOKEN = process.env.VERIFY_TOKEN;
   // Parse the query params
   let mode = req.query["hub.mode"];
   let token = req.query["hub.verify_token"];
@@ -34,6 +36,13 @@ let postWebhook = (req, res) => {
       // Get the sender PSID
       let sender_psid = webhook_event.sender.id;
       console.log("Sender PSID: " + sender_psid);
+      // Check if the event is a message or postback and
+      // pass the event to the appropriate handler function
+      if (webhook_event.message) {
+        handleMessage(sender_psid, webhook_event.message);
+      } else if (webhook_event.postback) {
+        handlePostback(sender_psid, webhook_event.postback);
+      }
     });
 
     // Returns a '200 OK' response to all requests

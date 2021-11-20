@@ -1,6 +1,5 @@
 'use strict';
 const express=require('express');
-const handle=require('./handlle');
 const homeController=require('./homeControllers'),
   bodyParser = require('body-parser');
   const app = express();
