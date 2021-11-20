@@ -28,22 +28,22 @@ function callSendAPI(sender_psid, response) {
   );
 }
 let getStartedButton = () => {
-  let response ={text:"Xin Chào Mọi Người"};
- /* let response = {
+ 
+  let response = {
     attachment: {
       type: "template",
       payload: {
         template_type: "generic",
         elements: [
           {
-            title: "Welcome to Taskdino Chatbot!",
+            title: "Welcome to Chatbot!",
             image_url:
-              "https://scontent.fsgn5-10.fna.fbcdn.net/v/t1.6435-9/245123950_114673120973061_8979926310271068735_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=e3f864&_nc_ohc=RKT401o9hpAAX9hUrj0&_nc_ht=scontent.fsgn5-10.fna&oh=f0b4eb3a1d3a2f10ca6ed8be56f7939e&oe=619E956C",
+              "https://lh3.googleusercontent.com/proxy/z5eiJPRzZekCHoyCqfu9_6Yo9EuaG083hN-cY-l7RHiDN8tO63gee5GsVIQDamTAESoUo6JS1EIOw3ivdnglXNKc1L_OtLbDFUaAtULTgNhoKUpIJs2l8ELG-edO5J7fAe97-Rk9bgukhpclHXFfWhCBosN5kBANe_ITilg",
             subtitle:
               "Online and mobile platform that connects local jobs or needs with freelancers quickly and conveniently, helping consumers find immediate help with daily tasks including cleaning. clean, move, repair and teach.",
             default_action: {
               type: "web_url",
-              url: WEBVIEW_URL,
+              url: `${WEBVIEW_URL}`,
               messenger_extensions: true,
               webview_height_ratio: "full",
             },
@@ -60,7 +60,7 @@ let getStartedButton = () => {
         ],
       },
     },
-  };*/
+  };
   return response;
 };
 module.exports = {
