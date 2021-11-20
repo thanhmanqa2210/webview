@@ -141,8 +141,8 @@ let setupPersistentMenu = (req, res) => {
     try {
       request(
         {
-          uri: "https://graph.facebook.com/v12.0/me/messenger_profile",
-          qs: { access_token: FACEBOOK_PAGE_ACCESS_TOKEN },
+          uri: `https://graph.facebook.com/v12.0/me/messenger_profile?access_token=${PAGE_ACCESS_TOKEN}`,
+          qs: { access_token: PAGE_ACCESS_TOKEN },
           method: "POST",
           json: request_body,
         },
