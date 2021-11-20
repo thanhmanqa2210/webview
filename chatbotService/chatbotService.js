@@ -28,7 +28,8 @@ function callSendAPI(sender_psid, response) {
   );
 }
 let getStartedButton = () => {
-  let response = {
+  let response ={text:"Xin Chào Mọi Người"};
+ /* let response = {
     attachment: {
       type: "template",
       payload: {
@@ -59,7 +60,7 @@ let getStartedButton = () => {
         ],
       },
     },
-  };
+  };*/
   return response;
 };
 module.exports = {
