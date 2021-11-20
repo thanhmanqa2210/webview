@@ -1,6 +1,6 @@
 require("dotenv").config();
 const request = require("request");
-const chatbotservice =require('./services/chatbotservice');
+const chatbotService = require('../chatbotService/chatbotService')
 const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
 let getHomePage = (req, res) => {
   return res.send("Hello WOrld");
@@ -103,7 +103,7 @@ function handleMessage(sender_psid, received_message) {
   }
 
   // Send the response message
-  chatbotservice.callSendAPI(sender_psid, response);
+  chatbotService.callSendAPI(sender_psid, response);
 }
 
 // Handles messaging_postbacks events
@@ -120,7 +120,7 @@ function handlePostback(sender_psid, received_postback) {
     response = { text: "Oops, try sending another image." };
   }
   // Send the message to acknowledge the postback
-  chatbotservice.callSendAPI(sender_psid, response);
+  chatbotService.callSendAPI(sender_psid, response);
 }
 
 module.exports = {
