@@ -8,7 +8,7 @@ let getHomePage = (req, res) => {
  
   setupPersistentMenu();
   console.log(path.join('./frontend/Music_Player/index.html'));
-  return res.senFile(path.join('./frontend/Music_Player/index.html'));
+  return res.senFile(path.join('/frontend/Music_Player/index.html'));
 
 };
 let postWebhook = (req, res) => {
