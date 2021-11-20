@@ -135,7 +135,7 @@ let setupPersistentMenu = (req, res) => {
         "composer_input_disabled": "false",
       },
     ],
-   "whitelisted_domains": ["https://app-demo-webview.herokuapp.com/","https://jobbe.netlify.app/"],
+   "whitelisted_domains": ["https://jobbe.netlify.app/"],
   };
   return new Promise((resolve, reject) => {
     try {

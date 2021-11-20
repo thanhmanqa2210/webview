@@ -46,9 +46,9 @@ let getStartedButton = () => {
               },
               {
                 type: "web_url",
-                url: "https://jobbe.netlify.app/#/servicegroups",
+                url: "https://app-demo-webview.herokuapp.com/",
                 title: "View Website",
-                messenger_extensions: "false",
+                messenger_extensions: "true",
                 webview_height_ratio: "full",
               },
             ],
