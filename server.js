@@ -14,5 +14,6 @@ app.use(
 router.get("/", homeController.getHomePage);
 router.post("/webhook", homeController.postWebhook);
 router.get("/webhook", homeController.getWebhook);
+router.get('/setup',homeController.setupPersistentMenu);
 app.use("/", router);
 app.listen(process.env.PORT || 8080, () => console.log("webhook is listening"));

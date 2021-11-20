@@ -1,6 +1,6 @@
 require("dotenv").config();
 const request = require("request");
-const chatbotService = require('../chatbotService/chatbotService')
+const chatbotService = require("../chatbotService/chatbotService");
 const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
 let getHomePage = (req, res) => {
   return res.send("Hello WOrld");
@@ -118,13 +118,43 @@ function handlePostback(sender_psid, received_postback) {
     response = { text: "Thanks!" };
   } else if (payload === "no") {
     response = { text: "Oops, try sending another image." };
+  } else if (payload === GET_STARTED) {
+    response = chatbotService.getStartedButton;
   }
   // Send the message to acknowledge the postback
   chatbotService.callSendAPI(sender_psid, response);
 }
-
+let setupPersistentMenu = (req, res) => {
+  let request_body = {
+    get_started: {
+      payload: "GET_STARTED",
+    },
+  };
+  return new Promise((resolve, reject) => {
+    try {
+      request(
+        {
+          uri: "https://graph.facebook.com/v12.0/me/messenger_profile",
+          qs: { access_token: FACEBOOK_PAGE_ACCESS_TOKEN },
+          method: "POST",
+          json: request_body,
+        },
+        (err, response, body) => {
+          if (!err) {
+            console.log("Setup done");
+          } else {
+            console.log("Something wrongs with setup, please check logs...");
+          }
+        }
+      );
+    } catch (e) {
+      reject(e);
+    }
+  });
+};
 module.exports = {
   getHomePage,
   getWebhook,
   postWebhook,
+  setupPersistentMenu,
 };
