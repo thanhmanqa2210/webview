@@ -1,10 +1,8 @@
-require('dotenv').config();
+// require('dotenv').config();
 let getHomePage=(req,res)=>{
     return res.send('Hello WOrld');
 }
-module.exports={
-    getHomePage
-}
+
 let postWebhook=(req,res)=>{
     let VERIFY_TOKEN = "<YOUR_VERIFY_TOKEN>"
       
@@ -28,4 +26,7 @@ let postWebhook=(req,res)=>{
         res.sendStatus(403);      
       }
     }
+}
+module.exports={
+    getHomePage
 }
