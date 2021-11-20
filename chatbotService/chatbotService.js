@@ -48,7 +48,7 @@ let getStartedButton = () => {
                 type: "web_url",
                 url: "https://jobbe.netlify.app/#/servicegroups",
                 title: "View Website",
-                messenger_extensions: "false",
+                messenger_extensions: "true",
                 webview_height_ratio: "full",
               },
             ],
