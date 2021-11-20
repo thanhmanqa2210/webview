@@ -5,10 +5,8 @@ const path = require('path');
 const chatbotService = require("../chatbotService/chatbotService");
 const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
 let getHomePage = (req, res) => {
- 
   setupPersistentMenu();
-  console.log(path.join('./frontend/Music_Player/index.html'));
-  return res.sendFile(path.join('frontend/Music_Player/index.html'));
+  return res.sendFile(path.join(__dirname+'html.html'));
 
 };
 let postWebhook = (req, res) => {
