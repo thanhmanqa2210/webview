@@ -1,5 +1,5 @@
 'use strict';
-
+const homeController=require('./homeController')
 // Imports dependencies and set up http server
 const
   express = require('express'),
@@ -57,7 +57,5 @@ app.post('/webhook', (req, res) => {
       }
     }
   });
-  app.get('/',(req,res)=>{
-      return res.send('Hello WOrld');
-  })
+app.get('/',homeController.getHomePage);
 app.listen(process.env.PORT || 8080, () => console.log('webhook is listening'));
