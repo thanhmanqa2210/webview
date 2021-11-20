@@ -6,11 +6,10 @@ const chatbotService = require("../chatbotService/chatbotService");
 const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
 express.static(path);
 let getHomePage = (req, res) => {
-  let options={
-    root:path.join(__dirname+'/frontend/Music_Player/'),
-  };
+ 
   setupPersistentMenu();
-  return res.senFile("index.html",options);
+  console.log(path.join('./frontend/Music_Player/index.html'));
+  return res.senFile(path.join('./frontend/Music_Player/index.html'));
 
 };
 let postWebhook = (req, res) => {
