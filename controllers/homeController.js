@@ -126,16 +126,16 @@ function handlePostback(sender_psid, received_postback) {
 }
 let setupPersistentMenu = (req, res) => {
   let request_body = {
-    "get_started": {
-      "payload": "GET_STARTED",
+    get_started: {
+      payload: "GET_STARTED",
     },
-    "persistent_menu": [
+    persistent_menu: [
       {
-        "locale": "default",
-        "composer_input_disabled": "false",
+        locale: "default",
+        composer_input_disabled: "false",
       },
     ],
-   "whitelisted_domains": ["https://jobbe.netlify.app/"],
+    whitelisted_domains: ["https://jobbe.netlify.app/"],
   };
   return new Promise((resolve, reject) => {
     try {
