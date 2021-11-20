@@ -4,7 +4,6 @@ const express=require('express');
 const path = require('path');
 const chatbotService = require("../chatbotService/chatbotService");
 const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
-express.static(path);
 let getHomePage = (req, res) => {
  
   setupPersistentMenu();
