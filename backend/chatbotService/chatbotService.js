@@ -42,7 +42,7 @@ let getStartedButton = () => {
               {
                 type: "web_url",
                 url: "https://app-demo-webview.herokuapp.com/",
-                title: "Heroku",
+                title: " Music Player",
                 messenger_extensions: "true",
                 webview_height_ratio: "full",
               },
