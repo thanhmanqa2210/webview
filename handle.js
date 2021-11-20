@@ -86,3 +86,7 @@ function callSendAPI(sender_psid, response) {
     }
   }); 
 }
+module.exports={
+    handleMessage,
+    handlePostback
+}
