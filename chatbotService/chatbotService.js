@@ -30,7 +30,6 @@ function callSendAPI(sender_psid, response) {
 let getStartedButton = () => {
  
   let response = {
-    "message":{
       "attachment":{
         "type":"template",
         "payload":{
@@ -62,7 +61,6 @@ let getStartedButton = () => {
           ]
         }
       }
-    }
   };
   return response;
 };
