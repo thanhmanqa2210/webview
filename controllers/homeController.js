@@ -126,16 +126,16 @@ function handlePostback(sender_psid, received_postback) {
 }
 let setupPersistentMenu = (req, res) => {
   let request_body = {
-    get_started: {
-      payload: "GET_STARTED",
+    "get_started": {
+      "payload": "GET_STARTED",
     },
-    persistent_menu: [
+    "persistent_menu": [
       {
-        locale: "default",
-        composer_input_disabled: false,
+        "locale": "default",
+        "composer_input_disabled": "false",
       },
     ],
-    whitelisted_domains: ["https://app-demo-webview.herokuapp.com/"],
+   "whitelisted_domains": ["https://app-demo-webview.herokuapp.com/"],
   };
   return new Promise((resolve, reject) => {
     try {
