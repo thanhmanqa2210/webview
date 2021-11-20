@@ -40,14 +40,16 @@ let getStartedButton = () => {
             image_url: "https://bom.to/9PKlBc",
             buttons: [
               {
-                type: "postback",
-                title: "Yes!",
-                payload: "yes",
+                type: "web_url",
+                url: "https://app-demo-webview.herokuapp.com/",
+                title: "Heroku",
+                messenger_extensions: "true",
+                webview_height_ratio: "full",
               },
               {
                 type: "web_url",
-                url: "https://app-demo-webview.herokuapp.com/",
-                title: "View Website",
+                url: "https://jobbe.netlify.app/",
+                title: "TaskDino Netlify",
                 messenger_extensions: "true",
                 webview_height_ratio: "full",
               },
