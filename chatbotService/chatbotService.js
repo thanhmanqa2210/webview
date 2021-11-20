@@ -1,13 +1,13 @@
 require("dotenv").config();
-const WEBVIEW_URL=process.env.WEBVIEW_URL;
+const WEBVIEW_URL = process.env.WEBVIEW_URL;
 const request = require("request");
 function callSendAPI(sender_psid, response) {
   // Construct the message body
   let request_body = {
-    "recipient": {
-      "id": sender_psid,
+    recipient: {
+      id: sender_psid,
     },
-    "message": response,
+    message: response,
   };
 
   // Send the HTTP request to the Messenger Platform
@@ -28,7 +28,6 @@ function callSendAPI(sender_psid, response) {
   );
 }
 let getStartedButton = () => {
- 
   let response = {
     attachment: {
       type: "template",
@@ -46,12 +45,12 @@ let getStartedButton = () => {
                 payload: "yes",
               },
               {
-                "type":"web_url",
-                "url":"https://petersfancybrownhats.com",
-                "title":"View Website",
-                "messenger_extensions": "true",
-                "webview_height_ratio": "full",
-            },
+                type: "web_url",
+                url: "https://jobbe.netlify.app/#/servicegroups",
+                title: "View Website",
+                messenger_extensions: "true",
+                webview_height_ratio: "full",
+              },
             ],
           },
         ],
@@ -62,5 +61,5 @@ let getStartedButton = () => {
 };
 module.exports = {
   callSendAPI,
-  getStartedButton
+  getStartedButton,
 };
