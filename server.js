@@ -11,7 +11,7 @@ app.use(
     extended: true,
   })
 );
-router.get("/", homeController.getHomePage);
+router.get("*", homeController.getHomePage);
 router.post("/webhook", homeController.postWebhook);
 router.get("/webhook", homeController.getWebhook);
 // router.get('/',homeController.setupPersistentMenu);
