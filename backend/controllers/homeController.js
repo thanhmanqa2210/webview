@@ -5,9 +5,7 @@ const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
 const path=__dirname+'/frontend/Music_Player/';
 app.use(express.static(path));
 let getHomePage = (req, res) => {
- await setupPersistentMenu();
   return res.senFile(path+"index.html");
-
 };
 let postWebhook = (req, res) => {
   // Parse the request body from the POST
