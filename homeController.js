@@ -1,4 +1,4 @@
-// require('dotenv').config();
+require('dotenv').config();
 let getHomePage=(req,res)=>{
     return res.send('Hello WOrld');
 }
@@ -28,5 +28,6 @@ let postWebhook=(req,res)=>{
     }
 }
 module.exports={
-    getHomePage
+    getHomePage,
+    postWebhook
 }
