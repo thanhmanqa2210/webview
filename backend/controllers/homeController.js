@@ -1,13 +1,16 @@
 require("dotenv").config();
 const request = require("request");
 const express=require('express');
+const path = require('path');
 const chatbotService = require("../chatbotService/chatbotService");
 const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
-const path=__dirname+'/frontend/Music_Player/';
 express.static(path);
 let getHomePage = (req, res) => {
+  let options={
+    root:path.join(__dirname+'/frontend/Music_Player/'),
+  };
   setupPersistentMenu();
-  return res.senFile(path+"index.html");
+  return res.senFile("index.html",options);
 
 };
 let postWebhook = (req, res) => {
