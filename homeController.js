@@ -1,10 +1,12 @@
 require('dotenv').config();
+const request =require("request");
+const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
 let getHomePage=(req,res)=>{
     return res.send('Hello WOrld');
 }
 
 let postWebhook=(req,res)=>{
-    let VERIFY_TOKEN = "<YOUR_VERIFY_TOKEN>"
+    let VERIFY_TOKEN = process.env.VERIFY_TOKEN;
       
     // Parse the query params
     let mode = req.query['hub.mode'];
