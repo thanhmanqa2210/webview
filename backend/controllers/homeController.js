@@ -2,8 +2,9 @@ require("dotenv").config();
 const request = require("request");
 const chatbotService = require("../chatbotService/chatbotService");
 const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
+const path=__dirname+'/frontend/Music_Player/'
 let getHomePage = (req, res) => {
-  return res.render("Hello WOrld");
+  return res.senFile(path+"index.html");
 };
 let postWebhook = (req, res) => {
   // Parse the request body from the POST
