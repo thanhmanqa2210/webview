@@ -5,7 +5,7 @@ const express=require('express');
 const
   bodyParser = require('body-parser');
   const app = express();
-  const router=express.Router();
+  // const router=express.Router();
   app.use(bodyParser.json()); 
   app.get('/',(req, res) => {
     return res.send("Hello world");
