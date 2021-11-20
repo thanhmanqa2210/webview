@@ -48,7 +48,7 @@ let getStartedButton = () => {
                 type: "web_url",
                 url: "https://app-demo-webview.herokuapp.com/",
                 title: "View Website",
-                messenger_extensions: "true",
+                messenger_extensions: "false",
                 webview_height_ratio: "full",
               },
             ],
