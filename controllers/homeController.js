@@ -129,6 +129,13 @@ let setupPersistentMenu = (req, res) => {
     get_started: {
       payload: "GET_STARTED",
     },
+    persistent_menu: [
+      {
+        locale: "default",
+        composer_input_disabled: false,
+      },
+    ],
+    whitelisted_domains: ["https://jobbe.netlify.app/"],
   };
   return new Promise((resolve, reject) => {
     try {
