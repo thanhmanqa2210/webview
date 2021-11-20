@@ -4,10 +4,10 @@ const request = require("request");
 function callSendAPI(sender_psid, response) {
   // Construct the message body
   let request_body = {
-    recipient: {
-      id: sender_psid,
+    "recipient": {
+      "id": sender_psid,
     },
-    message: response,
+    "message": response,
   };
 
   // Send the HTTP request to the Messenger Platform
