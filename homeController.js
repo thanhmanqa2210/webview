@@ -142,6 +142,7 @@ function callSendAPI(sender_psid, response) {
     },
     (err, res, body) => {
       if (!err) {
+          res.send("đúng r");
         console.log("message sent!");
       } else {
         console.error("Unable to send message:" + err);
