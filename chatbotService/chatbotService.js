@@ -46,11 +46,9 @@ let getStartedButton = () => {
                 payload: "yes",
               },
               {
-                type: "web_url",
-                url: `${WEBVIEW_URL}`,
-                title: "Start order",
-                messenger_extensions: false,
-                webview_height_ratio: "full",
+                "type":"web_url",
+                "url":"https://petersfancybrownhats.com",
+                "title":"View Website"
             },
             ],
           },
