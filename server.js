@@ -7,10 +7,10 @@ const
   const app = express();
   const router=express.Router();
   app.use(bodyParser.json()); 
-  router.get('/',(req, res) => {
+  app.get('/',(req, res) => {
     return res.send("Hello world");
   });
-  router.post('/webhook', (req, res) => {
+  app.post('/webhook', (req, res) => {
     let body = req.body;
   
     // Checks this is an event from a page subscription
@@ -41,7 +41,7 @@ const
     }
   }
   );
-  router.get('/webhook',  (req, res) => {
+  app.get('/webhook',  (req, res) => {
     let VERIFY_TOKEN = process.env.VERIFY_TOKEN;
     // Parse the query params
     let mode = req.query["hub.mode"];
@@ -60,5 +60,5 @@ const
       }
     }
   });
-  app.use('/',router);
+
   app.listen(process.env.PORT || 8080, () => console.log('webhook is listening'));
