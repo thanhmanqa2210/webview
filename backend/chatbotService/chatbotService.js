@@ -41,7 +41,7 @@ let getStartedButton = () => {
             buttons: [  
               {
                 type: "web_url",
-                url: "http://tmmusicplayer.herokuapp.com/",
+                url: "https://www.facebook.com/",
                 title: " Music Player",
                 messenger_extensions: "true",
                 webview_height_ratio: "full",
