@@ -41,7 +41,7 @@ let getStartedButton = () => {
             buttons: [  
               {
                 type: "web_url",
-                url: "https://www.facebook.com/",
+                url: "https://app-demo-webview.herokuapp.com/",
                 title: " Music Player",
                 messenger_extensions: "true",
                 webview_height_ratio: "full",
