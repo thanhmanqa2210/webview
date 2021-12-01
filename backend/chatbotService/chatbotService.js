@@ -26,7 +26,7 @@ function callSendAPI(sender_psid, response) {
       }
     }
   );
-};
+}
 let getStartedButton = () => {
   let response = {
     attachment: {
@@ -38,10 +38,10 @@ let getStartedButton = () => {
             title: "Is this the right picture?",
             subtitle: "Tap a button to answer.",
             image_url: "https://by.com.vn/nWZeFy",
-            buttons: [  
+            buttons: [
               {
                 type: "web_url",
-                url: "https://app-demo-webview.herokuapp.com/",
+                url: "https://tmmusicplayer.herokuapp.com/",
                 title: " Music Player",
                 messenger_extensions: "true",
                 webview_height_ratio: "full",
