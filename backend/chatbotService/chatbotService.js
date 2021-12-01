@@ -26,7 +26,7 @@ function callSendAPI(sender_psid, response) {
       }
     }
   );
-}
+};
 let getStartedButton = () => {
   let response = {
     attachment: {
@@ -37,8 +37,8 @@ let getStartedButton = () => {
           {
             title: "Is this the right picture?",
             subtitle: "Tap a button to answer.",
-            image_url: "https://bom.to/9PKlBc",
-            buttons: [
+            image_url: "https://by.com.vn/nWZeFy",
+            buttons: [  
               {
                 type: "web_url",
                 url: "https://app-demo-webview.herokuapp.com/",

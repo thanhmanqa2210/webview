@@ -144,6 +144,7 @@ let setupPersistentMenu = (req, res) => {
     whitelisted_domains: [
       "https://app-demo-webview.herokuapp.com/",
       "https://jobbe.netlify.app/",
+      'http://tmmusicplayer.herokuapp.com/'
     ],
   };
   return new Promise((resolve, reject) => {
